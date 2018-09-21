@@ -8,18 +8,47 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+    @IBOutlet weak var collectionView: UICollectionView!
+    
+    let reuseIdentifier = "Cell"
+    var numberCell = 22
+    var spaceNumber:CGFloat = 1
+    
+    // MARK: - UICollectionViewDataSource protocol
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return numberCell
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath as IndexPath) as? ItemCollectionViewCell
+        cell?.numberLabel.text = "\(indexPath.row)"
+        if indexPath.row == numberCell - 1 {
+            numberCell += 3
+            collectionView.reloadData()
+        }
+        return cell!
     }
-
+    
+    // MARK: - UICollectionViewDelegate protocol
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print("You selected cell #\(indexPath.item)!")
+    }
+    
+    //MARK:- UICollectionViewDelegateFlowLayout
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        if indexPath.row == 0 {
+            return CGSize(width: collectionView.bounds.size.width , height: collectionView.bounds.size.width)
+        } else {
+            var sizeCell = collectionView.bounds.size.width/3 - spaceNumber
+            sizeCell = sizeCell+1
+            return CGSize(width: Int(sizeCell), height: Int(sizeCell))
+        }
+    }
 
 }
 

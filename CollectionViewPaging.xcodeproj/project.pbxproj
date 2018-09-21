@@ -14,6 +14,7 @@
 		660A63E521549AEF00898501 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 660A63E321549AEF00898501 /* LaunchScreen.storyboard */; };
 		660A63F021549AEF00898501 /* CollectionViewPagingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660A63EF21549AEF00898501 /* CollectionViewPagingTests.swift */; };
 		660A63FB21549AEF00898501 /* CollectionViewPagingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660A63FA21549AEF00898501 /* CollectionViewPagingUITests.swift */; };
+		660A64092154AD8300898501 /* ItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660A64082154AD8300898501 /* ItemCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		660A63F621549AEF00898501 /* CollectionViewPagingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CollectionViewPagingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		660A63FA21549AEF00898501 /* CollectionViewPagingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewPagingUITests.swift; sourceTree = "<group>"; };
 		660A63FC21549AEF00898501 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		660A64082154AD8300898501 /* ItemCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 			children = (
 				660A63DA21549AED00898501 /* AppDelegate.swift */,
 				660A63DC21549AED00898501 /* ViewController.swift */,
+				660A64082154AD8300898501 /* ItemCollectionViewCell.swift */,
 				660A63DE21549AED00898501 /* Main.storyboard */,
 				660A63E121549AEF00898501 /* Assets.xcassets */,
 				660A63E321549AEF00898501 /* LaunchScreen.storyboard */,
@@ -256,6 +259,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				660A64092154AD8300898501 /* ItemCollectionViewCell.swift in Sources */,
 				660A63DD21549AED00898501 /* ViewController.swift in Sources */,
 				660A63DB21549AED00898501 /* AppDelegate.swift in Sources */,
 			);
@@ -431,6 +435,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ACJ6PD7A2R;
 				INFOPLIST_FILE = CollectionViewPaging/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -448,6 +453,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ACJ6PD7A2R;
 				INFOPLIST_FILE = CollectionViewPaging/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
